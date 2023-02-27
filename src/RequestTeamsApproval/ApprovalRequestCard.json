@@ -1,0 +1,26 @@
+{
+    "summary": "Durable Functions asked for approval!",
+    "sections": [
+        {
+            "activityTitle": "Durable Functions",
+            "activitySubtitle": " You are asked for approval",
+            "activityImage": "https://i0.wp.com/synedgy.com/wp-content/uploads/2022/12/psday-uk-london2023.png"
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "HttpPOST",
+            "name": "Approve",
+            "target": "{{approve-url}}",
+            "body": "true",
+            "bodyContentType": "application/json"
+        },
+        {
+            "@type": "HttpPOST",
+            "name": "Reject",
+            "target": "{{reject-url}}",
+            "body": "true",
+            "bodyContentType": "application/json"
+        }
+    ]
+}

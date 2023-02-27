@@ -1,0 +1,10 @@
+{
+  "scriptFile": "ApprovalFlow.ps1",
+  "bindings": [
+    {
+      "name": "Context",
+      "type": "orchestrationTrigger",
+      "direction": "in"
+    }
+  ]
+}

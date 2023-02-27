@@ -1,0 +1,10 @@
+{
+  "scriptFile": "SendTeamsResponse.ps1",
+  "bindings": [
+    {
+      "name": "RequestInfo",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}

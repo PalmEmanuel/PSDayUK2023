@@ -1,0 +1,10 @@
+{
+  "scriptFile": "RequestTeamsApproval.ps1",
+  "bindings": [
+    {
+      "name": "RequestInfo",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}

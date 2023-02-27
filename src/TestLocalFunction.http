@@ -1,0 +1,8 @@
+POST http://localhost:7071/api/requestApproval
+
+###
+
+POST http://localhost:7071/runtime/webhooks/durabletask/instances/<instance-id>/raiseEvent/Approve
+content-type: application/json
+
+true

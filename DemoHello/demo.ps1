@@ -1,0 +1,2 @@
+# Find and import PowerShellWorker module, first import compiled dll module, then the manifest file
+Get-ChildItem "$(Split-Path (Get-Command 'func').Source -Parent)\*\7.2" -Recurse | Get-ChildItem -Recurse -Filter 'Microsoft.Azure.Functions.PowerShellWorker*' -File | Where-Object { $_.Extension -in '.dll','.psd1' } | Import-Module

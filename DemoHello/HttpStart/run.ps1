@@ -1,8 +1,6 @@
 using namespace System.Net
 
-param($Request, $TriggerMetadata, $Starter)
-
-$Starter
+param($Request, $TriggerMetadata)
 
 $FunctionName = $Request.Params.FunctionName
 $InstanceId = Start-DurableOrchestration -FunctionName $FunctionName

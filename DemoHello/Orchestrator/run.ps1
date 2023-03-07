@@ -1,9 +1,11 @@
 param($Context)
 
-$output = @()
+$Context | ConvertTo-Json | Write-Information
 
-$output += Invoke-DurableActivity -FunctionName 'Hello' -Input 'Tokyo'
-$output += Invoke-DurableActivity -FunctionName 'Hello' -Input 'Seattle'
-$output += Invoke-DurableActivity -FunctionName 'Hello' -Input 'London'
+$Tasks = @()
 
-$output
+$Tasks += Invoke-DurableActivity -FunctionName 'Hello' -Input 'Tokyo' -NoWait
+$Tasks += Invoke-DurableActivity -FunctionName 'Hello' -Input 'Seattle' -NoWait
+$Tasks += Invoke-DurableActivity -FunctionName 'Hello' -Input 'London' -NoWait
+
+Wait-DurableTask -Task $Tasks
